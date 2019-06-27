@@ -20,10 +20,8 @@ class App < Sinatra::Base
   end
   
   get "/multiply/:num1/:num2" do |num1, num2| 
-   
-   get '/download/*.*' do |filename, ext|
-  file = "#{filename}.#{ext}"
-  path = "<path to files>/#{file}"
+    @product = num1 * num2
+  
   
     "#{params[:num1, :num2]}"
   end 
