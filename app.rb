@@ -19,8 +19,12 @@ class App < Sinatra::Base
     "Goodbye, #{@user_name}."
   end
   
-  get "/multiply/:num1/:num2" do 
+  get "/multiply/:num1/:num2" do |num1, num2| 
    
+   get '/download/*.*' do |filename, ext|
+  file = "#{filename}.#{ext}"
+  path = "<path to files>/#{file}"
+  
     "#{params[:num1, :num2]}"
   end 
 end
